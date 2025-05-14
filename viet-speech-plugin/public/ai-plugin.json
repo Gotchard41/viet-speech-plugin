@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Việt Voice Plugin",
+  "name_for_model": "viet_voice_transcriber",
+  "description_for_human": "Chuyển giọng nói tiếng Việt thành văn bản.",
+  "description_for_model": "Nhận file âm thanh tiếng Việt và trả về văn bản.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://gotchard41-viet-speech-plugin.vercel.app/openapi.yaml"
+  },
+  "logo_url": "https://gotchard41-viet-speech-plugin.vercel.app/logo.png",
+  "contact_email": "your@email.com",
+  "legal_info_url": "https://example.com/legal"
+}
