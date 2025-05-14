@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: Việt Voice Transcriber API
+  description: API chuyển giọng nói thành văn bản tiếng Việt.
+  version: v1
+servers:
+  - url: https://gotchard41-viet-speech-plugin.vercel.app
+paths:
+  /api/convert:
+    post:
+      summary: Chuyển giọng nói thành văn bản
+      operationId: convertAudioToText
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                audio:
+                  type: string
+                  format: binary
+                  description: "File âm thanh"
+      responses:
+        "200":
+          description: Thành công
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        "400":
+          description: Lỗi file
+        "500":
+          description: Lỗi server
